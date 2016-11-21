@@ -32,8 +32,8 @@ bool Pulser::update()
         // How long have we been in the current state?
         unsigned long d = msec - m_switchTime;
         // Has the current state's duration elapsed yet?
-        if ((m_state && d >= m_onTime)
-            || (!m_state && d >= m_offTime)) {
+        if ((m_state && (long) (d - m_onTime) >= 0)
+            || (!m_state && (long) (d - m_offTime) >= 0)) {
             // If so, toggle the state and mark the current clock time.
             m_state = !m_state;
             m_switchTime = msec;
