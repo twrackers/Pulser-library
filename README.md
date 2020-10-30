@@ -1,4 +1,4 @@
-# Pulser library #
+# Pulser #
 
 The `Pulser` class is derived from the `StateMachine` class ([https://github.com/twrackers/StateMachine-library](https://github.com/twrackers/StateMachine-library)).  A *Pulser* object toggles periodically between 'on' and 'off' states (implemented with booleans `true` and `false`), with separate on and off durations specified in milliseconds.  The *Pulser* class can be further subclassed to provide more functionality, such as turning an LED on and off.
 
